@@ -10,7 +10,6 @@ function rollD(dieSides, modifier = 0, amount = 1) {
 function rollInitiative() {
   const modifier = 1;
   const roll = rollD(20, modifier);
-  display(globals.sheet);
   display('Rolled ' + roll + ' (' + (roll - modifier) + ' + ' + modifier +') for initiative!');
 }
 

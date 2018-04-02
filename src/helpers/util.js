@@ -1,8 +1,5 @@
-function playerLevel(){
-  return SpreadsheetApp.getActiveSpreadsheet()
-                       .getSheetByName("Character")
-                       .getRange(globals.levelCell)
-                       .getValue();
+function level() {
+  return globals.sheet.character.getRange(globals.levelCell).getValue();
 }
 
 function bonus(bonusName) {
@@ -19,7 +16,7 @@ function abilityScoreMod(abilityScoreName) {
 
 function levelChart(attributeName, level) {
   if (!level) {
-    level = playerLevel();
+    level = level();
   }
   let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Metadata");
   let headers = sheet.getRange(globals.levelChartHeaders).getValues();
