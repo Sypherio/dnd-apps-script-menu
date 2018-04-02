@@ -11,7 +11,7 @@
     "babel-cli": "^6.0.0"
   },
   "scripts": {
-    "build": "babel src -d build --copy-files && clasp push"
+    "build": "rm -r build && babel src -d build --copy-files && clasp push"
   },
   "author": "",
   "license": "ISC"

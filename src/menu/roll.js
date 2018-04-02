@@ -13,31 +13,31 @@ function rollSpellHit() {
 }
 
 function rollD4() {
-  return rollD(4);
+  return display(rollD(4));
 }
 
 function rollD6() {
-  return rollD(6);
+  return display(rollD(6));
 }
 
 function rollD8() {
-  return rollD(8);
+  return display(rollD(8));
 }
 
 function rollD10() {
-  return rollD(10);
+  return display(rollD(10));
 }
 
 function rollD12() {
-  return rollD(12);
+  return display(rollD(12));
 }
 
 function rollD20() {
-  return rollD(20);
+  return display(rollD(20));
 }
 
 function rollD100() {
-  return rollD(100);
+  return display(rollD(100));
 }
 
 function rollDX() {

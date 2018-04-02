@@ -1,12 +1,12 @@
 function sortMoney() {
-  var moneyRange = SpreadsheetApp.getActiveSpreadsheet()
+  let moneyRange = SpreadsheetApp.getActiveSpreadsheet()
                                  .getActiveSheet()
                                  .getRange(get('moneyRange'));
   
-  var copperCell = moneyRange.getCell(1, 4);
-  var silverCell = moneyRange.getCell(1, 3); 
-  var goldCell = moneyRange.getCell(1, 2);
-  var platinumCell = moneyRange.getCell(1, 1);
+  let copperCell = moneyRange.getCell(1, 4);
+  let silverCell = moneyRange.getCell(1, 3); 
+  let goldCell = moneyRange.getCell(1, 2);
+  let platinumCell = moneyRange.getCell(1, 1);
   
   silverCell.setValue(silverCell.getValue() + Math.floor(copperCell.getValue() / 10));
   copperCell.setValue(copperCell.getValue() % 10);

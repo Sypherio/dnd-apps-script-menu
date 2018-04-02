@@ -7,9 +7,10 @@ function longRest() {
 }
 
 function warlockRest() {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Spellbook");
-  var spellSlotsRange = sheet.getRange(get('spellSlotsRange'));
-  for (var i = 1; i <= spellSlotsRange.getHeight(); i += 1) {
+  let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Spellbook");
+  let spellSlotsRange = sheet.getRange(get('spellSlotsRange'));
+  let i;
+  for (i = 1; i <= spellSlotsRange.getHeight(); i += 1) {
     spellSlotsRange.getCell(i, 1).setValue('');
   }
 }

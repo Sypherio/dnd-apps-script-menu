@@ -21,19 +21,20 @@ function levelChart(attributeName, level) {
   if (!level) {
     level = playerLevel();
   }
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Metadata");
-  var headers = sheet.getRange(get('levelChartHeaders')).getValues();
-  var data = sheet.getRange(get('levelChartData')).getValues();
-  var colIndex = headers[0].indexOf(attributeName);
+  let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Metadata");
+  let headers = sheet.getRange(get('levelChartHeaders')).getValues();
+  let data = sheet.getRange(get('levelChartData')).getValues();
+  let colIndex = headers[0].indexOf(attributeName);
   return data[level - 1][colIndex];
 }
 
 function lookupByKeyword(sheetName, dataRange, keyword, rowOffset, colOffset) {
-  var data = SpreadsheetApp.getActiveSpreadsheet()
+  let data = SpreadsheetApp.getActiveSpreadsheet()
                            .getSheetByName(sheetName)
                            .getRange(dataRange)
                            .getValues();
-  for (var i = 0; i < data.length; i += 1) {
+  let i;
+  for (i = 0; i < data.length; i += 1) {
     if (data[i][0] == keyword) {
       return data[i + rowOffset][colOffset];
     }
