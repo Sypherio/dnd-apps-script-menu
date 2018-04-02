@@ -1,43 +1,21 @@
-function rollD(max, modifier = 0) {
-  return (Math.floor(Math.random() * Math.floor(max))) + modifier;
+function rollD(dieSides, modifier = 0, amount = 1) {
+  let total = 0;
+  let i;
+  for (i = 0; i < amount; i += 1) {
+    total += (Math.floor(Math.random() * Math.floor(dieSides))) + modifier;
+  }
+  return total;
 }
 
 function rollInitiative() {
   const modifier = 1;
   const roll = rollD(20, modifier);
+  display(globals.sheet);
   display('Rolled ' + roll + ' (' + (roll - modifier) + ' + ' + modifier +') for initiative!');
 }
 
 function rollSpellHit() {
   return;
-}
-
-function rollD4() {
-  return display(rollD(4));
-}
-
-function rollD6() {
-  return display(rollD(6));
-}
-
-function rollD8() {
-  return display(rollD(8));
-}
-
-function rollD10() {
-  return display(rollD(10));
-}
-
-function rollD12() {
-  return display(rollD(12));
-}
-
-function rollD20() {
-  return display(rollD(20));
-}
-
-function rollD100() {
-  return display(rollD(100));
 }
 
 function rollDX() {

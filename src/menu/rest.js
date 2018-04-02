@@ -7,8 +7,7 @@ function longRest() {
 }
 
 function warlockRest() {
-  let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Spellbook");
-  let spellSlotsRange = sheet.getRange(get('spellSlotsRange'));
+  let spellSlotsRange = globals.sheet.spellbook.getRange(globals.spellSlotsRange);
   let i;
   for (i = 1; i <= spellSlotsRange.getHeight(); i += 1) {
     spellSlotsRange.getCell(i, 1).setValue('');

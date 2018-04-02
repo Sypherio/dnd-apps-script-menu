@@ -1,7 +1,5 @@
 function sortMoney() {
-  let moneyRange = SpreadsheetApp.getActiveSpreadsheet()
-                                 .getActiveSheet()
-                                 .getRange(get('moneyRange'));
+  let moneyRange = globals.sheet.inventory.getRange(globals.moneyRange);
   
   let copperCell = moneyRange.getCell(1, 4);
   let silverCell = moneyRange.getCell(1, 3); 

@@ -1,6 +1,8 @@
+// Arrays are 1-indexed for easy level parameterization
 var chart = {
     levels: {
         xpRequired: [
+            undefined,
             0,      // 1
             300,    // 2
             900,    // 3
@@ -23,6 +25,7 @@ var chart = {
             355000, // 20
         ],
         proficiency: [
+            undefined,
             2, // 1
             2, // 2
             2, // 3
@@ -46,6 +49,7 @@ var chart = {
         ],
         warlock: {
             cantripsKnown: [
+                undefined,
                 2, // 1
                 2, // 2
                 2, // 3
@@ -68,6 +72,7 @@ var chart = {
                 4, // 20
             ],
             invocationsKnown: [
+                undefined,
                 0, // 1
                 2, // 2
                 2, // 3
@@ -90,6 +95,7 @@ var chart = {
                 8, // 20
             ],
             spellsKnown: [
+                undefined,
                 2,  // 1
                 3,  // 2
                 4,  // 3
@@ -112,6 +118,7 @@ var chart = {
                 15, // 20
             ],
             spellSlots: [
+                undefined,
                 1, // 1
                 2, // 2
                 2, // 3
@@ -134,6 +141,7 @@ var chart = {
                 4, // 20
             ],
             slotLevel: [
+                undefined,
                 1, // 1
                 1, // 2
                 2, // 3
@@ -156,6 +164,7 @@ var chart = {
                 5, // 20
             ],
             features: [
+                undefined,
                 'Otherworldly Patron, Pact Magic', // 1
                 'Eldritch Invocations',            // 2
                 'Pact Boon',                       // 3
@@ -339,6 +348,6 @@ var chart = {
         urchin: {
             name: 'Urchin',
             description: '',
-        }
+        },
     },
 };

@@ -1,16 +1,16 @@
 function playerLevel(){
   return SpreadsheetApp.getActiveSpreadsheet()
                        .getSheetByName("Character")
-                       .getRange(get('levelCell'))
+                       .getRange(globals.levelCell)
                        .getValue();
 }
 
 function bonus(bonusName) {
-  return lookupByKeyword("Bonuses", get('bonusRange'), bonusName, 0, 1);
+  return lookupByKeyword("Bonuses", globals.bonusRange, bonusName, 0, 1);
 }
 
 function abilityScore(abilityScoreName) {
-  return lookupByKeyword("Character", get('abilityScoreRange'), abilityScoreName, 1, 0);
+  return lookupByKeyword("Character", globals.abilityScoreRange, abilityScoreName, 1, 0);
 }
 
 function abilityScoreMod(abilityScoreName) {
@@ -22,8 +22,8 @@ function levelChart(attributeName, level) {
     level = playerLevel();
   }
   let sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Metadata");
-  let headers = sheet.getRange(get('levelChartHeaders')).getValues();
-  let data = sheet.getRange(get('levelChartData')).getValues();
+  let headers = sheet.getRange(globals.levelChartHeaders).getValues();
+  let data = sheet.getRange(globals.levelChartData).getValues();
   let colIndex = headers[0].indexOf(attributeName);
   return data[level - 1][colIndex];
 }
@@ -40,4 +40,12 @@ function lookupByKeyword(sheetName, dataRange, keyword, rowOffset, colOffset) {
     }
   }
   return 0;
+}
+
+function display(message, header = 'Test', duration = 5) {
+  alertUser(message);
+}
+
+function alertUser(message) {
+  SpreadsheetApp.getUi().alert(message);
 }
