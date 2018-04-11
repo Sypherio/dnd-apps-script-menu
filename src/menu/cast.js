@@ -11,5 +11,5 @@ function agonizingBlast() {
 }
 
 function hellishRebuke() {
-  display(globals.sheet.inventory.getLastColumn());
+  
 }

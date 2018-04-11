@@ -20,13 +20,13 @@ var globals = (() => {
   };
 })();
 
-function getCell(sheet, keyword, xOffset = 0, yOffset = 0) {
+function getCell(sheet, keyword, xOffset = 0, yOffset = 0, width = 1, height = 1) {
   const sheetData = sheet.getDataRange().getValues();
   let y;
   for (y = 0; y < sheetData.length; y += 1) {
     const x = sheetData[y].indexOf(keyword);
     if (x >= 0) {
-      return sheet.getRange(1 + y + yOffset, 1 + x + xOffset);
+      return sheet.getRange(1 + y + yOffset, 1 + x + xOffset, height, width);
     }
   }
 }

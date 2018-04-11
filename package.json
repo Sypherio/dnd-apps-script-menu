@@ -11,8 +11,8 @@
     "babel-cli": "^6.0.0"
   },
   "scripts": {
-    "build": "rm -r build && babel src -d build --copy-files && clasp push"
+    "build": "babel src -d build --copy-files && clasp push && rm -r build"
   },
-  "author": "",
+  "author": "Steve Teplica",
   "license": "ISC"
 }
