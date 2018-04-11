@@ -10,6 +10,6 @@ function agonizingBlast() {
   display('agonizing blast! ' + numberOfBeams);
 }
 
-function scorchingRay() {
-  
+function hellishRebuke() {
+  display(globals.sheet.inventory.getLastColumn());
 }

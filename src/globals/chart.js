@@ -186,52 +186,61 @@ var chart = {
       'Eldritch Master',                 // 20
     ],
   },
-  races: (() => {
+  race: (() => {
     const Size = Object.freeze({
       SMALL: 'Small',
       MEDIUM: 'Medium',
     });
     const races = {
       dwarf: {
+        name: 'Dwarf',
         size: Size.MEDIUM,
         speed: 25,
       },
       elf: {
+        name: 'Elf',
         size: Size.MEDIUM,
         speed: 30,
       },
       halfling: {
+        name: 'Halfling',
         size: Size.SMALL,
         speed: 25,
       },
       human: {
+        name: 'Human',
         size: Size.MEDIUM,
         speed: 30,
       },
       dragonborn: {
+        name: 'Dragonborn',
         size: Size.MEDIUM,
         speed: 30,
       },
       gnome: {
+        name: 'Gnome',
         size: Size.SMALL,
         speed: 25,
       },
       halfElf: {
+        name: 'Half-Elf',
         size: Size.MEDIUM,
         speed: 30,
       },
       halfOrc: {
+        name: 'Half-Orc',
         size: Size.MEDIUM,
         speed: 30,
       },
       tiefling: {
+        name: 'Tiefling',
         size: Size.MEDIUM,
         speed: 30,
       },
     };
     return races;
   })(),
-  classes: {
+  class: {
     barbarian: {
       name: 'Barbarian',
       description: '',
@@ -277,11 +286,11 @@ var chart = {
       description: '',
     },
     wizard: {
-      name: 'Warlock',
+      name: 'Wizard',
       description: '',
     },
   },
-  alignments: [
+  alignment: [
     'Lawful Good',
     'Neutral Good',
     'Chaotic Good',
@@ -292,7 +301,7 @@ var chart = {
     'Neutral Evil',
     'Chaotic Evil',
   ],
-  backgrounds: {
+  background: {
     acolyte: {
       name: 'Acolyte',
       description: '',

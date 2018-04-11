@@ -3,7 +3,7 @@ function onOpen() {
   ui.createMenu('D&D')
     .addSubMenu(ui.createMenu('Roll')
       .addItem('Initiative', 'rollInitiative')
-      .addItem('DX', 'rollDX'))
+      .addItem('Roll X', 'rollX'))
     .addSubMenu(ui.createMenu('Cast')
       .addItem('Agonizing Blast', 'agonizingBlast')
       .addItem('Hellish Rebuke', 'hellishRebuke'))
